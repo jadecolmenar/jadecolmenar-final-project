@@ -44,9 +44,6 @@ section {
     padding: 20px;
 }
 
-#about, #projects, #contact {
-    margin: 20px 0;
-}
 
 .project-card {
     background-color: white;

@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+html,body {
+    background: url("file:///C:/Users/Jade.colmenar/Downloads/1330483.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 110vh;
+    background: rgba(39, 39, 39, 0.4);
+}
+.nav {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    background: linear-gradient(rgba(39, 39, 39, 0.6), transparent);
+    z-index: 100;
+}
+.navLogo p{
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+}
+.navMenu ul{
+    display: flex;
+}
+
+.navMenu ul li{
+    list-style-type: none;
+}
+
+.navMenu ul li .link {
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+    padding-bottom:15px ;
+    margin: 0 25px;
+}
+
+.link:hover, .active{
+    border-bottom: 2px solid #fff;
+}
+
+.navButt .btn {
+    width: 130px;
+    height: 40px;
+    font-weight: 500;
+    background:rgba(255, 255, 255, 0.4);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+.btn:hover{
+    background: rgba(255, 255, 255, 0.3);
+}
+.registerBtn {
+    margin-left: 15px;
+}
+
+.btn.white-btn {
+    background:rgba(255, 255, 255, 0.692);
+}
+.btn.white-btn:hover{
+    background: rgba(255, 255, 255, 0.5);
+}
+.nav-menu-btn{
+    display: none;
+}
+
+
+
+.formBox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 512px;
+    height: 460px;
+    overflow: hidden;
+    z-index: 2;
+}
+.loginContainer{
+    position: absolute;
+    right: 4px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
+}
+.registerContainer{
+    position: absolute;
+    right: -520px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
+}
+.top span {
+    columns: rgb(255, 255, 255);
+    font-size: small;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.top span a{
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    margin-left: 5px;
+}
+header {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px 0 30px 0;
+}
+.twoForms{
+    display: flex;
+    gap: 10px;
+}
+.inputField{
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    height: 50px;
+    width: 100%;
+    padding: 0 10px 0 45px ;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    transition: .2s ease;
+}
+
+.inputField:hover, .inputField:focus{
+    background:rgba(255, 255, 255, 0.25);
+}
+::-webkit-input-placeholder {
+    color: #fff;
+}
+.inputBox i{
+    position: relative;
+    top: -35px;
+    left: 17px;
+    color: #fff;
+}
+.submit{
+    font-size: 15px;
+    font-family: 500;
+    color: black;
+    height: 45px;
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+.submit:hover{
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 1px 5px 7px 1px rgba(255, 255, 255, 0.25);
+}
+.twoCol{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: small;
+    margin-top: 10px;
+}
+.twoCol .two{
+    display: flex;
+    color: white;
+}
+.two label a:hover {
+    text-decoration: underline;
+}
+
+/*Supposed to make the navigation bar into a small menu button. Make it more responsive. It doesn't work. 
+  When it changes to navMenuresponzive, it doesn't take in the attributes with it. it becomes boring and ugly*/
+@media only screen and (max-width: 786px) {
+    .navButt{
+        display: none;
+    }
+    .navMenu.responsive {
+        top: 100px;
+    }
+    .navMenu{
+        position: absolute;
+        top: -800px;
+        display: flex;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.2);
+        width: 100%;
+        height: 90vh;
+        backdrop-filter: blur(20px);
+        transition: .3s;
+    }
+
+    .navMenu ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-menu-btn {
+        display: block;        
+    }
+    .nav-menu-btn i {
+        font-size: 25px;
+        color: white;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        cursor: pointer;
+        padding: 10px;
+        transition: .3s;
+    }
+    .nav-menu-btn i:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .wrapper {
+        min-height: 100vh;
+    }    
+    .formBox{
+        width: 100%;
+        height: 500px;
+    }
+    .registerContainer, .loginContainer{
+        width: 100%;
+        padding: 0 20px;
+
+    }
+    .registerContainer .twoForms{
+        flex-direction: column;
+        gap: 0;
+    }
+}

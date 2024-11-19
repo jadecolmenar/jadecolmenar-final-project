@@ -6,7 +6,6 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #000000;
@@ -14,7 +13,7 @@ body {
 
 /* Navigation bar styling */
 header {
-    background-color: #fdfdfd;
+    background-color: #f4f4f4;
     color: rgb(255, 255, 255);
     padding: 20px 0;
     text-align: center;
@@ -24,27 +23,18 @@ header {
 header h1 {
     margin: 0;
 }
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    overflow:hidden;
-    background-color:#ffffff;
-
-}
-
-nav ul li {
-    margin: 0 20px;
-}
-
-nav ul li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
+a {
     text-decoration: none;
-    font-size: 18px;
+    color: black;
+  }
+  
+  a:hover {
+    color: #8d94b0;
+  }
+  
+  /* ===== Navigation Styling ===== */
+  nav a {
+    margin-right: 20px; /* Adds space to the right of each link */
   }
 
 /* Main content styling */
@@ -56,11 +46,31 @@ main {
     background: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
+h1 {
+    font-size: 2.5em;
+    margin: 0.5em 0;
+  }
+  
+  .paragraph-light {
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: #666;
+  }
+  
+  /* ===== Responsive Styles ===== */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2em;
+    }
+  
+    .paragraph-light {
+      font-size: 1em;
+    }
+  }
 h1 {
     text-align: center;
     margin-bottom: 20px;
-    color: #ffffff;
+    color: #000000;
 }
 
 

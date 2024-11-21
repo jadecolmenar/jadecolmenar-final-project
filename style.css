@@ -155,3 +155,7 @@ h1 {
   background-color: #fafafa;
   box-shadow: 0 0 4px 4px #fafafa;
 }
+
+.experience-container {
+  text-align: center;
+}

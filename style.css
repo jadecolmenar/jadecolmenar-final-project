@@ -102,6 +102,7 @@ footer p {
 /* ===== Intro Section ===== */
 .intro-wrap {
   width: 100%;
+  text-align: left;
 }
 
 h1 {
@@ -114,6 +115,7 @@ h1 {
   line-height: 1.5;
   color: #666;
 }
+
 
 /* ===== Responsive Styles ===== */
 @media (max-width: 768px) {
@@ -133,25 +135,101 @@ h1 {
 
 /* ===== Profile Picture Styling ===== */
 .profile-pic {
-  width: 200px; /* Adjust size as needed */
-  height: 200px;
+  width: 400px; /* Adjust size as needed */
+  height: 400px;
   border-radius: 50%; /* Makes the image circular */
   object-fit: cover; /* Ensures the image fills the circular area without distortion */
   border: 3px solid #4289fc00; /* Optional border for styling */
   margin-bottom: 20px; /* Adjust to space the image from other elements */
-  justify-content: center;
+  justify-content: left;
+}
+
+.image-container {
+  text-align: left; /* Aligns the image to the left */
+  padding-right: 200px;
 }
 
 /* ===== Projects Section ===== */
 #projects {
-  background-color: #fafafa;
-  box-shadow: 0 0 4px 4px #fafafa;
-  width: 90%;
-  height: 400px;
+  background-color: #ffffff;
 }
 
 /* ===== Resume Section ===== */
 #resume {
   background-color: #fafafa;
   box-shadow: 0 0 4px 4px #fafafa;
+}
+
+
+.work-experience {
+  padding: 50px 0;
+  position: relative;
+}
+
+.experience-item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.company-name {
+  flex-grow: 1;
+  font-weight: bold;
+  font-size: 18px;
+  display: inline-block;
+}
+
+.job-title {
+  font-style: italic;
+  color: #6c757d;
+  font-size: 16px;
+  margin-left: 25px;
+}
+
+.date-range {
+  font-style: italic;
+  color: #6c757d;
+  font-size: 14px;
+}
+
+/* Dot styles */
+.dot {
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #007bff;
+}
+
+/* Vertical line connecting dots */
+.vertical-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background-color: #007bff;
+  z-index: -1;
+}
+
+/* Button styles */
+.download-btn {
+  margin-top: 20px;
+  display: block;
+  width: 200px;
+  text-align: center;
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.download-btn:hover {
+  background-color: #0056b3;
 }

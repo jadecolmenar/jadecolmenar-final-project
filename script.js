@@ -1,4 +1,4 @@
-const words = ["Web Developer", "UX/UI Designer", "App Devloper", "Creator"];
+const words = ["Student", "UX/UI Designer", "Web Developer", "App Devloper", "Creator"];
 let index = 0;
 
 const typedElement = document.getElementById("typing-effect");
@@ -14,7 +14,7 @@ function typeWord(word, callback) {
       clearInterval(typingInterval);
       if (callback) callback();
     }
-  }, 100); // Type each letter every 100ms
+  }, 150); // Type each letter every 100ms
 }
 function deleteWord(callback) {
   let i = typedElement.textContent.length;
@@ -46,3 +46,16 @@ typeWord(words[index], () => {
     });
   }, 2000); // Wait 2 seconds before starting to delete
 });
+
+
+
+
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}

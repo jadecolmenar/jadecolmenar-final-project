@@ -19,30 +19,31 @@ nav a {
 
 /* ===== Footer Styling ===== */
 footer {
-  background-color: #f8f9fa;
   color: black;
   text-align: center;
-  padding: 10px 0; /* Reduces padding to make footer smaller */
   font-size: 0.9em; /* Adjusts font size */
   width: 100vmax;
 }
 
+/* Style the text below the icons */
+footer .footer-text {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000000;
+}
+
+
 footer ul {
   display: flex;
   justify-content: center;
-  padding: 0;
-  margin: 0;
   list-style-type: none;
-  background-color: #f8f9fa;
 }
 
 footer ul a {
   text-decoration: none;
   color: rgb(0, 0, 0);
-  margin: 0 10px; /* Controls spacing between icons */
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 footer ul a svg {
@@ -320,3 +321,4 @@ label {
   display: block;
   margin-bottom: 10px;
 }
+

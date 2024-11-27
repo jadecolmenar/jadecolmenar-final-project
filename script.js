@@ -1,4 +1,5 @@
-const words = ["Student", "UX/UI Designer", "Web Developer", "App Devloper", "Creator"];
+// Words for typing effect
+const words = ["Student", "UX/UI Designer", "Web Developer", "App Developer", "Creator"];
 let index = 0;
 
 const typedElement = document.getElementById("typing-effect");
@@ -14,8 +15,9 @@ function typeWord(word, callback) {
       clearInterval(typingInterval);
       if (callback) callback();
     }
-  }, 150); // Type each letter every 100ms
+  }, 150); // Type each letter every 150ms
 }
+
 function deleteWord(callback) {
   let i = typedElement.textContent.length;
 
@@ -28,6 +30,7 @@ function deleteWord(callback) {
     }
   }, 50); // Delete each letter every 50ms
 }
+
 function changeWord() {
   index = (index + 1) % words.length; // Cycle through words array
   typeWord(words[index], () => {
@@ -39,6 +42,7 @@ function changeWord() {
   });
 }
 
+// Start the typing effect
 typeWord(words[index], () => {
   setTimeout(() => {
     deleteWord(() => {
@@ -47,15 +51,51 @@ typeWord(words[index], () => {
   }, 2000); // Wait 2 seconds before starting to delete
 });
 
-
-
-
-/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
+// Responsive Navbar Toggle
+function toggleNavbar() {
+  const nav = document.getElementById("myTopnav");
+  nav.classList.toggle("responsive");
 }
+
+// Accessibility Panel and Features
+document.addEventListener('DOMContentLoaded', () => {
+  const accessibilityBtn = document.getElementById('accessibility-btn');
+  const accessibilityPanel = document.getElementById('accessibility-panel');
+  const closePanelBtn = document.getElementById('close-panel');
+
+  // Accessibility Feature Buttons
+  const features = {
+    dyslexiaFont: () => {
+      document.body.style.fontFamily = '"OpenDyslexic", Arial, sans-serif';
+      alert("Dyslexia-friendly font activated!");
+    },
+    contrastMode: () => {
+      document.body.style.filter = document.body.style.filter === 'contrast(1.5)' ? 'none' : 'contrast(1.5)';
+      alert("High contrast mode toggled!");
+    },
+    screenReader: () => {
+      alert("Screen reader mode activated!");
+    },
+    colorBlindMode: () => {
+      document.body.style.filter = document.body.style.filter === 'grayscale(100%)' ? 'none' : 'grayscale(100%)';
+      alert("Color blind mode toggled!");
+    }
+  };
+
+  // Toggle off-canvas panel visibility
+  accessibilityBtn.addEventListener('click', () => {
+    accessibilityPanel.classList.toggle('active');
+    accessibilityPanel.classList.toggle('hidden');
+  });
+
+  closePanelBtn.addEventListener('click', () => {
+    accessibilityPanel.classList.add('hidden');
+    accessibilityPanel.classList.remove('active');
+  });
+
+  // Add event listeners to buttons
+  Object.keys(features).forEach(featureId => {
+    const button = document.getElementById(featureId);
+    if (button) button.addEventListener('click', features[featureId]);
+  });
+});
